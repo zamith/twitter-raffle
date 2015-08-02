@@ -1,6 +1,6 @@
 # twitter-raffle
 
-TODO: Write a description here for library
+Runs raffles on twitter, based on a hashtag
 
 ## Installation
 
@@ -8,7 +8,7 @@ Add it to `Projectfile`
 
 ```crystal
 deps do
-  github "[your-github-name]/twitter-raffle"
+  github "zamith/twitter-raffle"
 end
 ```
 
@@ -16,13 +16,9 @@ end
 
 ```crystal
 require "twitter-raffle"
+
+p Twitter::Raffle::FinderOfWinners.new("hashtag").winner
 ```
-
-TODO: Write usage here for library
-
-## Development
-
-TODO: Write instructions for development
 
 ## Contributing
 

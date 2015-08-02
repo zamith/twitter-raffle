@@ -13,8 +13,14 @@ module Twitter::Raffle
   end
 
   class FinderOfWinners
-    def tweets_with_hashtag(hashtag)
-      response = client.get("/1.1/search/tweets.json", { "q" => "##{hashtag}", "count" => "100" })
+    def initialize(@hashtag); end
+
+    def winner
+      tweets_with_hashtag.uniq.sample
+    end
+
+    private def tweets_with_hashtag
+      response = client.get("/1.1/search/tweets.json", { "q" => "##{@hashtag}", "count" => "100" })
       Statuses.from_json(response).statuses.reject{|tweet| tweet.retweeted_status}.map &.user.not_nil!.name
     end
 
@@ -23,5 +29,3 @@ module Twitter::Raffle
     end
   end
 end
-
-p Twitter::Raffle::FinderOfWinners.new.tweets_with_hashtag("eurucamp2pt").uniq.sample
