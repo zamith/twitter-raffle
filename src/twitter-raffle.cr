@@ -24,4 +24,4 @@ module Twitter::Raffle
   end
 end
 
-p Twitter::Raffle::FinderOfWinners.new.tweets_with_hashtag("eurucamp2pt").sample
+p Twitter::Raffle::FinderOfWinners.new.tweets_with_hashtag("eurucamp2pt").uniq.sample
