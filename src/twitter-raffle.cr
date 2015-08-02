@@ -15,7 +15,7 @@ module Twitter::Raffle
   class FinderOfWinners
     def tweets_with_hashtag(hashtag)
       response = client.get("/1.1/search/tweets.json", { "q" => "##{hashtag}", "count" => "100" })
-      Statuses.from_json(response).statuses.map &.user.not_nil!.name
+      Statuses.from_json(response).statuses.reject{|tweet| tweet.retweeted_status}.map &.user.not_nil!.name
     end
 
     private def client
