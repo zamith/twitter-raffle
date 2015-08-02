@@ -22,7 +22,7 @@ p Twitter::Raffle::FinderOfWinners.new("hashtag").winner
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/twitter-raffle/fork )
+1. Fork it ( https://github.com/zamith/twitter-raffle/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -30,4 +30,4 @@ p Twitter::Raffle::FinderOfWinners.new("hashtag").winner
 
 ## Contributors
 
-- [your-github-name](https://github.com/[your-github-name]) Zamith - creator, maintainer
+- [zamith](https://github.com/zamith) Zamith - creator, maintainer
