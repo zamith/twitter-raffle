@@ -1,0 +1,7 @@
+name: twitter-raffle
+version: 0.1.0
+author: Luis Ferreira
+
+dependencies:
+  twitter-crystal:
+    github: sferik/twitter-crystal

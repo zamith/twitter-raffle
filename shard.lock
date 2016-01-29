@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  twitter-crystal:
+    github: sferik/twitter-crystal
+    commit: 4e8db42f5abf760dbe349da3508f51dcc6eb5268
+

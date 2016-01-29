@@ -1,5 +1,5 @@
 require "./twitter-raffle/*"
-require "twitter"
+require "twitter-crystal/twitter"
 require "yaml"
 require "json"
 
@@ -7,7 +7,7 @@ TWITTER_VARS = YAML.load(File.read(".env.yml")) as Hash
 
 module Twitter::Raffle
   class Statuses
-    json_mapping({
+    JSON.mapping({
       statuses: {type: Array(Twitter::Tweet)}
     })
   end

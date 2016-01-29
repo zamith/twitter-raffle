@@ -3,3 +3,4 @@
 /.crystal/
 /doc/
 .env.yml
+.shards
